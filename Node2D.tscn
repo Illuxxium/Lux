@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://reeeee.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://drawing.svg" type="Texture" id=4]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -22.6064, -11.2676, -23.944, 1.74738, -17.9246, 0.783306, -15.5168, -18.4981, -15.5168, -18.3776 )
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 209.5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 1 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0, 0, 0, 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( -403.996, -457.948, 1815.82, -364.793, 1795.37, 1159.77, -410.812, 1168.86 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( 608.961, 396.666 )
+scale = Vector2( 12.1584, 13.4959 )
+occluder = SubResource( 2 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 541.286, 327.922 )
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 87.3235, 48.6438 )
+rotation = -0.63566
+
+[node name="Wall2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 380.688, -4.3428 )
+rotation = 0.243836
+
+[node name="Wall3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 657.253, 25.3814 )
+rotation = -0.0418704
+
+[node name="Wall4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 957.079, 77.0757 )
+rotation = 0.386665
+
+[node name="Wall5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1055.3, 303.238 )
+rotation = 1.64133
+
+[node name="Wall6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 929.939, 542.324 )
+rotation = 2.39748
+
+[node name="Wall7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 671.468, 623.742 )
+rotation = 3.24522
+
+[node name="Wall8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 379.396, 608.234 )
+rotation = 3.14159
+
+[node name="Wall9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 91.2005, 553.955 )
+rotation = 0.406659
+
+[node name="Wall10" parent="." instance=ExtResource( 3 )]
+position = Vector2( -19.9421, 344.594 )
+rotation = 1.61317
+
+[node name="Wall11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9.78204, 177.88 )
+rotation = 1.91594
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 666.958, 250.62 )
+scale = Vector2( 12.1584, 13.4959 )
+texture = ExtResource( 4 )
+texture_scale = 0.25
+color = Color( 1, 1, 0, 1 )
+shadow_enabled = true
+shadow_color = Color( 1, 1, 1, 0 )
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 627.838, 348.844 )
+scale = Vector2( 12.1584, 13.4959 )
+texture = ExtResource( 4 )
+texture_scale = 0.25
+color = Color( 0, 0, 1, 1 )
+shadow_enabled = true
+
