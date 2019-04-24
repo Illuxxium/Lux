@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
+custom_solver_bias = 1.0
 extents = Vector2( 150, 50 )
 
 [sub_resource type="Gradient" id=2]
@@ -26,5 +27,6 @@ texture = SubResource( 3 )
 polygon = PoolVector2Array( 150, 50, 150, -50, -150, -50, -150, 50 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource( 4 )
 
